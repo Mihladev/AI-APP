@@ -7,15 +7,7 @@ from wordcloud import WordCloud
 from collections import Counter
 
 # FastAPI backend URL
-backend_url = "http://backend:8000" 
-
-
-if st.button("Give me the version number!"):
-    url_suffix = "version_number"
-    response = requests.get(backend_url + url_suffix)
-    with st.spinner("Requesting version number"):
-        st.write(response.json())
-
+backend_url = "http://127.0.0.1:8000" 
 
 st.set_page_config(
     page_title="Job Market Analysis",
