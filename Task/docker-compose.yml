@@ -1,0 +1,17 @@
+version: '3'
+services:
+  backend:
+    build: ./Task/BE  # Path to the backend directory
+    ports:
+      - "8000:8000"  # Expose port 8000 for FastAPI
+    volumes:
+      - ./Task/BE:/workspace/BE  # Mount backend code to container
+    command: uvicorn main:app --host 0.0.0.0 --port 8000  # Start FastAPI backend
+
+  frontend:
+    build: ./Task/FE  # Path to the frontend directory
+    ports:
+      - "8501:8501"  # Expose port 8501 for Streamlit
+    volumes:
+      - ./Task/FE:/workspace/FE  # Mount frontend code to container
+    command: streamlit run app.py --server.enableCORS false --server.enableXsrfProtection false  # Start Streamlit
