@@ -16,9 +16,9 @@ def load_data():
     try:
         # Loading datasets
         entry_level = pd.read_csv("data/entry_level.csv")
-        mid_level = pd.read_csv("mid_level.csv")
-        senior_level = pd.read_csv("senior_level.csv")
-        all_data = pd.read_csv("Team_1.csv")  
+        mid_level = pd.read_csv("data/mid_level.csv")
+        senior_level = pd.read_csv("data/senior_level.csv")
+        all_data = pd.read_csv("data/Team_1.csv")  
     except FileNotFoundError:
         raise HTTPException(status_code=500, detail="Dataset files not found.")
 
