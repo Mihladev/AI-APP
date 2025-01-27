@@ -7,7 +7,7 @@ from wordcloud import WordCloud
 from collections import Counter
 
 # FastAPI backend URL
-backend_url = "http://127.0.0.1:8000"  # Update this URL if necessary
+backend_url = "http://127.0.0.1:8000/data/preview"  
 
 st.set_page_config(
     page_title="Job Market Analysis",
