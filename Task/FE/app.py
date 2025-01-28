@@ -5,9 +5,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from wordcloud import WordCloud
 from collections import Counter
+import toml
 
-# FastAPI backend URL
-backend_url = "http://127.0.0.1:8000" 
+config = toml.load("config.toml")
+backend_url = config["backend"]["url"]
 
 st.set_page_config(
     page_title="Job Market Analysis",
