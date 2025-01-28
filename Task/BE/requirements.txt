@@ -1,3 +1,4 @@
+toml
 fastapi==0.115.7
 matplotlib==3.8.0
 pandas==2.2.3
