@@ -1,7 +1,10 @@
+import os
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import pandas as pd
 from transformers import GPTNeoForCausalLM, GPT2Tokenizer
+
+VERCEL_URL = os.environ.get("VERCEL_URL", "http://localhost:8000")
 
 app = FastAPI()
 
