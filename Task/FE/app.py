@@ -7,8 +7,12 @@ from wordcloud import WordCloud
 from collections import Counter
 import toml
 
+# Load config file
 config = toml.load("Task/FE/config.toml")
+
 backend_url = config["backend"]["url"]
+if "VERCEL_URL" in os.environ:
+    backend_url = os.environ["VERCEL_URL"]
 
 st.set_page_config(
     page_title="Job Market Analysis",
