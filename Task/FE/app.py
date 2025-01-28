@@ -7,7 +7,7 @@ from wordcloud import WordCloud
 from collections import Counter
 import toml
 
-config = toml.load("config.toml")
+config = toml.load("Task/FE/config.toml")
 backend_url = config["backend"]["url"]
 
 st.set_page_config(
