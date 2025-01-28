@@ -11,5 +11,8 @@
       "src": "/(.*)",
       "dest": "main.py"
     }
-  ]
+  ],
+  "limits": {
+    "bodySize": 500
+  }
 }
